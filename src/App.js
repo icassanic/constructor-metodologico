@@ -72,7 +72,7 @@ function EtapaPanel({ etapa, datos, onUpdate, prevDatos }) {
   const [loading, setLoading] = useState(false);
   const [alerts, setAlerts] = useState([]);
 
-  useEffect(() => { setInp(datos?.input || ""); setDraft(datos?.borrador || ""); setAlerts([]); }, [etapa.id]);
+  useEffect(() => { setInp(datos?.input || ""); setDraft(datos?.borrador || ""); setAlerts([]); }, [etapa.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const ctx = () => {
     const c = [];
